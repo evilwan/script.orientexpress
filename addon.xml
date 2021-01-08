@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="script.openvpn" name="OpenVPN" version="3.0.0" provider-name="brianhornsby">
+<addon id="script.orientexpress" name="OrientExpress" version="1.0.0" provider-name="evilwan">
 	<requires>
 		<import addon="xbmc.python" version="2.1.0"/>
 		<import addon="script.module.beautifulsoup" version="3.0.8"/>
@@ -7,11 +7,10 @@
 	<extension point="xbmc.python.script" library="default.py"/>
 	<extension point="xbmc.addon.metadata">
 		<platform>all</platform>
-		<summary lang="en">OpenVPN addon for Kodi.</summary>
-		<description lang="en">This addon allows you to set up a number of OpenVPN configurations, which you can then run from Kodi.
-For more information on setting up this addon see http://brianhornsby.com/kodi_plugins/openvpn</description>
+		<summary lang="en">ExpressVPN addon for Kodi.</summary>
+		<description lang="en">This addon allows you to use basic ExpressVPN commandline tool options from Kodi. Based on OpenVPN by brianhornsby (http://brianhornsby.com/kodi_plugins/openvpn)</description>
 		<license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
-		<website>http://brianhornsby.com/kodi_addons/openvpn</website>
-		<source>https://github.com/brianhornsby/script.openvpn</source>
+		<website>https://github.com/evilwan/script.orientexpress</website>
+		<source>https://github.com/evilwan/script.orientexpress</source>
   </extension>
 </addon>

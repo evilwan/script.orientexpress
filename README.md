@@ -1,65 +1,71 @@
-OpenVPN for Kodi
+OrientExpress for Kodi
 ==========
-A script that allows you to control OpenVPN from within Kodi.
+Script for controlling some of the options provided by the ExpressVPN command line tool, from within Kodi. As such, this tool is merely a graphical interface for using that command line tool, it is not a replacement or addon.
+
+Not all options of the command line tool are available through this Kodi addon, just some basic use cases are provided.
+
+Note that this tool is in no way affiliated with, or endorsed by, ExpressVPN ([https://www.expressvpn.com/])
+
+The geolocation code is provided by the upstream code (OpenVPN for Kodi)
+
+This code is currently more of a quick hack of the original OpenVPN code, so there is plenty of room for improvements if you feel so inclined.
+
+Most of the code is probably copryrighted by the upstream author. The only file in this tool that is written more or less from scratch is resources/lib/orientexpress.py but even that file is heavily inspired by the original file resources/lib/openvpn.py
+
+The logo comes from a website with rights-free images (forgot which one: contact me if you feel that this is an error)
 
 Features
 -----
-- Start and stop OpenVPN from with Kodi.
-- Setup multiple VPN connections.
+- Start and stop ExpressVPN from with Kodi.
+- Select VPN server (exit point)
 - Display current geo-location.
 
 Screenshots
 -----
-<img alt="Select OpenVPN configuration dialog" src="https://raw.github.com/brianhornsby/www_brianhornsby_com/master/img/openvpn_select_configuration.png" height="128"/>
-<img alt="Geo-location notifications" src="https://raw.github.com/brianhornsby/www_brianhornsby_com/master/img/openvpn_geolocation_notification.png" height="128"/>
+For now, please use your own imagination...
+
+Prerequisites
+------
+This addon is merely a graphical interface for the ExpressVPN unix command line tool, so first visit the ExpressVPN website ([https://www.expressvpn.com/]) to download the installer of the command line tool for your operating system. Next install and configure the tool on the system where you run Kodi: verify that you have a working ExpressVPN tunnel before using this addon.
 
 Installation
 ------
-Download the latest zip file and install the addon. See [http://kodi.wiki/view/HOW-TO:Install_an_Add-on_from_a_zip_file][1] for more details on installing addons from zip file.
+The quickest way is to download this repository as a ZIP file, then install the addon from that ZIP. See [http://kodi.wiki/view/HOW-TO:Install_an_Add-on_from_a_zip_file][1] for more details on installing addons from zip file. Just be sure that the ZIP file contains the directory script.orientexpress in its root (Kodi expects all files below directory "script." + the name of the Kodi addon)
+
+If you want to create your own ZIP file, run shell script package_zip.sh from within the root directory of this repo. No special software is required: just a working bash and zip command line tool. As the addon is written in Python, there is nothing to compile or build.
 
 Usage
 ------
-The SimilarTracks script can be accessed from the Programs menu or called using the RunScript builtin function (RunScript(script.openvpn)). The script can be passed the following arguments; e.g. RunScript(script.openvpn, Los Angeles).
 
-**import**: Run the import configuration dialog.
+The tool is rather self-explanatory. The following functions are available:
 
-**delete**: Run the delete configuration dialog.
+**Show the current VPN IP configuration (same functionality as the OpenVPN parent tool)
 
-**location**: Display the current geo-location. Uses IPInfoDB API.
+**Show a list of available VPN endpoints (exit servers)
 
-**disconnect**: Disconnect the current OpenVPN connection.
+**Connect to a specific endpoint
 
-**\<openvpn configuration\>**: Run the specified OpenVPN configuration.
+**Disconnect from VPN
+
+**Connect to the last active VPN endpoint
+
+For any other manipulation of the ExpressVPN setup, please use SSH to connect to your Kodi box and use the expressvpn command line tool.
 
 Settings
 --------
-The following settings are available.
-
-**Import OpenVPN Configuration File**: Selecting this setting invokes the import configuration dialog.
-
-**Delete OpenVPN Configuration File**: Selecting the option invokes the delete configuration dialog.
-
-**OpenVPN**: Set this to the OpenVPN binary. Default: /usr/bin/openvp
-
-**Management IP Address**: Use this option to change the IP address used by OpenVPN management interface. Default: 127.0.0.1
-
-**Management Port**: Use this option to change the port used by the OpenVPN management interface. Default: 1337
-
-**Additional Arguments**: Use this option to specify any extra command line arguments to be supplied to OpenVPN.
-
-**Use sudo when running OpenVPN**: Set this option to true if you require OpenVPN to be run using sudo. Default: false
-
-**Password is required**: Set to true if a password is required when using sudo. Default: true
+For now no configurable settings are implemented.
 
 FAQ
 ---
 
 **Is this plugin available in a Kodi addons repository?** No
 
-**I can't get the OpenVPN plugin to work on Raspberry Pi?** Before asking me for help I suggest reading the following [guide][3].
+**I can't get the OrientExpress plugin to work on Raspberry Pi?** Before asking me for help I suggest reading the following [guide][3].
 
 License
 ------
+OrientExpress is a fork of OpenVPN for Kodi.
+
 OpenVPN for Kodi is licensed under the [GPL 3.0 license][2].
 
 [1]: http://kodi.wiki/view/HOW-TO:Install_an_Add-on_from_a_zip_file
