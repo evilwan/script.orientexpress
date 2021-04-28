@@ -2,10 +2,10 @@
 <settings>
 	<category label="2000">
 		<setting label="2007" type="lsep"/>
-		<setting label="2001" type="action" action="RunScript(script.expressvpn, select)"/>
-		<setting label="2002" type="action" action="RunScript(script.expressvpn, connect)"/>
-		<setting label="2030" type="action" action="RunScript(script.expressvpn, location)"/>
-		<setting label="2031" type="action" action="RunScript(script.expressvpn, disconnect)"/>
+		<setting label="2001" type="action" action="RunScript(script.orientexpress, select)"/>
+		<setting label="2002" type="action" action="RunScript(script.orientexpress, connect)"/>
+		<setting label="2030" type="action" action="RunScript(script.orientexpress, location)"/>
+		<setting label="2031" type="action" action="RunScript(script.orientexpress, disconnect)"/>
 		<setting label="2003" type="lsep"/>
 		<setting id="expressvpn" type="file" label="2000" default="/usr/bin/expressvpn"/>
 		<setting id="args" type="text" label="2006" default=""/>
